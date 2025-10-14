@@ -35,12 +35,14 @@
             this.lblValorJogo = new System.Windows.Forms.Label();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.lblPesquisar = new System.Windows.Forms.Label();
             this.cmbTiposJogos = new System.Windows.Forms.ComboBox();
-            this.grpOpcionais = new System.Windows.Forms.GroupBox();
             this.chk2contas = new System.Windows.Forms.CheckBox();
             this.chk2controles = new System.Windows.Forms.CheckBox();
             this.chkTotalPass = new System.Windows.Forms.CheckBox();
             this.chkTesteDrive = new System.Windows.Forms.CheckBox();
+            this.grpOpcionais = new System.Windows.Forms.GroupBox();
             this.grpOpcionais.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             // 
             // txtValorJogo
             // 
-            this.txtValorJogo.Location = new System.Drawing.Point(224, 91);
+            this.txtValorJogo.Location = new System.Drawing.Point(245, 90);
             this.txtValorJogo.Name = "txtValorJogo";
             this.txtValorJogo.Size = new System.Drawing.Size(126, 20);
             this.txtValorJogo.TabIndex = 1;
@@ -61,14 +63,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(400, 91);
+            this.textBox3.Location = new System.Drawing.Point(421, 90);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(126, 20);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(581, 91);
+            this.textBox4.Location = new System.Drawing.Point(602, 90);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(126, 20);
             this.textBox4.TabIndex = 3;
@@ -76,7 +78,7 @@
             // lblValorJogo
             // 
             this.lblValorJogo.AutoSize = true;
-            this.lblValorJogo.Location = new System.Drawing.Point(228, 43);
+            this.lblValorJogo.Location = new System.Drawing.Point(249, 42);
             this.lblValorJogo.Name = "lblValorJogo";
             this.lblValorJogo.Size = new System.Drawing.Size(94, 13);
             this.lblValorJogo.TabIndex = 4;
@@ -85,7 +87,7 @@
             // lblValorOpcionais
             // 
             this.lblValorOpcionais.AutoSize = true;
-            this.lblValorOpcionais.Location = new System.Drawing.Point(397, 39);
+            this.lblValorOpcionais.Location = new System.Drawing.Point(418, 38);
             this.lblValorOpcionais.Name = "lblValorOpcionais";
             this.lblValorOpcionais.Size = new System.Drawing.Size(130, 13);
             this.lblValorOpcionais.TabIndex = 5;
@@ -94,11 +96,27 @@
             // lblValorPagar
             // 
             this.lblValorPagar.AutoSize = true;
-            this.lblValorPagar.Location = new System.Drawing.Point(578, 43);
+            this.lblValorPagar.Location = new System.Drawing.Point(599, 42);
             this.lblValorPagar.Name = "lblValorPagar";
             this.lblValorPagar.Size = new System.Drawing.Size(93, 13);
             this.lblValorPagar.TabIndex = 6;
             this.lblValorPagar.Text = "VALOR A PAGAR";
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(412, 190);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(126, 20);
+            this.txtPesquisar.TabIndex = 14;
+            // 
+            // lblPesquisar
+            // 
+            this.lblPesquisar.AutoSize = true;
+            this.lblPesquisar.Location = new System.Drawing.Point(340, 197);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(56, 13);
+            this.lblPesquisar.TabIndex = 15;
+            this.lblPesquisar.Text = "Pesquisar:";
             // 
             // cmbTiposJogos
             // 
@@ -108,19 +126,6 @@
             this.cmbTiposJogos.Size = new System.Drawing.Size(121, 21);
             this.cmbTiposJogos.TabIndex = 7;
             this.cmbTiposJogos.Text = "TIPOS DE JOGOS";
-            // 
-            // grpOpcionais
-            // 
-            this.grpOpcionais.Controls.Add(this.chkTesteDrive);
-            this.grpOpcionais.Controls.Add(this.chkTotalPass);
-            this.grpOpcionais.Controls.Add(this.chk2controles);
-            this.grpOpcionais.Controls.Add(this.chk2contas);
-            this.grpOpcionais.Location = new System.Drawing.Point(42, 149);
-            this.grpOpcionais.Name = "grpOpcionais";
-            this.grpOpcionais.Size = new System.Drawing.Size(155, 134);
-            this.grpOpcionais.TabIndex = 8;
-            this.grpOpcionais.TabStop = false;
-            this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
             // 
             // chk2contas
             // 
@@ -163,11 +168,26 @@
             this.chkTesteDrive.Text = "TESTE DRIVE";
             this.chkTesteDrive.UseVisualStyleBackColor = true;
             // 
+            // grpOpcionais
+            // 
+            this.grpOpcionais.Controls.Add(this.chkTesteDrive);
+            this.grpOpcionais.Controls.Add(this.chkTotalPass);
+            this.grpOpcionais.Controls.Add(this.chk2controles);
+            this.grpOpcionais.Controls.Add(this.chk2contas);
+            this.grpOpcionais.Location = new System.Drawing.Point(42, 149);
+            this.grpOpcionais.Name = "grpOpcionais";
+            this.grpOpcionais.Size = new System.Drawing.Size(155, 134);
+            this.grpOpcionais.TabIndex = 8;
+            this.grpOpcionais.TabStop = false;
+            this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
+            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPesquisar);
+            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.cmbTiposJogos);
             this.Controls.Add(this.lblValorPagar);
@@ -195,11 +215,13 @@
         private System.Windows.Forms.Label lblValorJogo;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.ComboBox cmbTiposJogos;
-        private System.Windows.Forms.GroupBox grpOpcionais;
-        private System.Windows.Forms.CheckBox chkTesteDrive;
-        private System.Windows.Forms.CheckBox chkTotalPass;
-        private System.Windows.Forms.CheckBox chk2controles;
         private System.Windows.Forms.CheckBox chk2contas;
+        private System.Windows.Forms.CheckBox chk2controles;
+        private System.Windows.Forms.CheckBox chkTotalPass;
+        private System.Windows.Forms.CheckBox chkTesteDrive;
+        private System.Windows.Forms.GroupBox grpOpcionais;
     }
 }
