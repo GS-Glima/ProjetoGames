@@ -43,7 +43,13 @@
             this.chkTotalPass = new System.Windows.Forms.CheckBox();
             this.chkTesteDrive = new System.Windows.Forms.CheckBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.dgvPedido = new System.Windows.Forms.DataGridView();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.grpOpcionais.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -181,6 +187,50 @@
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(226, 408);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(117, 30);
+            this.btnSalvar.TabIndex = 11;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(607, 408);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(117, 30);
+            this.btnSair.TabIndex = 13;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            // 
+            // dgvPedido
+            // 
+            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedido.Location = new System.Drawing.Point(41, 313);
+            this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.Size = new System.Drawing.Size(683, 79);
+            this.dgvPedido.TabIndex = 9;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(421, 408);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(117, 30);
+            this.btnCalcular.TabIndex = 12;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(42, 408);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(117, 30);
+            this.btnNovo.TabIndex = 10;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +238,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.dgvPedido);
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.cmbTiposJogos);
             this.Controls.Add(this.lblValorPagar);
@@ -201,6 +256,7 @@
             this.Text = "Pedido";
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +279,10 @@
         private System.Windows.Forms.CheckBox chkTotalPass;
         private System.Windows.Forms.CheckBox chkTesteDrive;
         private System.Windows.Forms.GroupBox grpOpcionais;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.DataGridView dgvPedido;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Button btnNovo;
     }
 }
