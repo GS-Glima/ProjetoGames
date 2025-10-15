@@ -30,8 +30,8 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtValorJogo = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtValorOpcionais = new System.Windows.Forms.TextBox();
+            this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.lblValorJogo = new System.Windows.Forms.Label();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
@@ -67,19 +67,19 @@
             this.txtValorJogo.TabIndex = 1;
             this.txtValorJogo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txtValorOpcionais
             // 
-            this.textBox3.Location = new System.Drawing.Point(421, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(126, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtValorOpcionais.Location = new System.Drawing.Point(421, 90);
+            this.txtValorOpcionais.Name = "txtValorOpcionais";
+            this.txtValorOpcionais.Size = new System.Drawing.Size(126, 20);
+            this.txtValorOpcionais.TabIndex = 2;
             // 
-            // textBox4
+            // txtValorTotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(602, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(126, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtValorTotal.Location = new System.Drawing.Point(602, 90);
+            this.txtValorTotal.Name = "txtValorTotal";
+            this.txtValorTotal.Size = new System.Drawing.Size(126, 20);
+            this.txtValorTotal.TabIndex = 3;
             // 
             // lblValorJogo
             // 
@@ -132,6 +132,7 @@
             this.cmbTiposJogos.Size = new System.Drawing.Size(121, 21);
             this.cmbTiposJogos.TabIndex = 7;
             this.cmbTiposJogos.Text = "TIPOS DE JOGOS";
+            this.cmbTiposJogos.SelectedIndexChanged += new System.EventHandler(this.cmbTiposJogos_SelectedIndexChanged);
             // 
             // chk2contas
             // 
@@ -195,6 +196,7 @@
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnSair
             // 
@@ -221,6 +223,7 @@
             this.btnCalcular.TabIndex = 12;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnNovo
             // 
@@ -248,12 +251,13 @@
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
             this.Controls.Add(this.lblValorJogo);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtValorTotal);
+            this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.txtValorJogo);
             this.Controls.Add(this.textBox1);
             this.Name = "Pedido";
             this.Text = "Pedido";
+            this.Load += new System.EventHandler(this.Pedido_Load);
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
@@ -266,8 +270,8 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtValorJogo;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtValorOpcionais;
+        private System.Windows.Forms.TextBox txtValorTotal;
         private System.Windows.Forms.Label lblValorJogo;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;

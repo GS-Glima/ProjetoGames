@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace ProjetoGames
 {
     class conexao
     {
-        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=bdprojeto;user=root;pwd=12345678");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=bdprojeto;user=root;pwd=");
 
         public static string msg;
 
