@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,6 +85,11 @@ namespace ProjetoGames
             txtValorTotal.Text = valorTotal.ToString();
         }
 
+        private conexao GetCon()
+        {
+            return con;
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (txtValorJogo.Text == "")
@@ -99,6 +106,32 @@ namespace ProjetoGames
             {
                 MessageBox.Show("Campo Obrigatório");
                 txtValorTotal.Focus();
+            }
+            else
+            {
+                try
+                {
+                    string sql = "insert into tbPedido(tipoJogo,valorJogo,valorOpcao,valorTotal) values(@jogo,@vjogo,@vopcao,@total)";
+                    MySqlCommand cmd = new MySqlCommand(sql, con.ConnectarBD());
+                    cmd.Parameters.Add("@jogo", MySqlDbType.Text).Value = cmbTiposJogos.Text;
+                    cmd.Parameters.Add("@vjogo", MySqlDbType.Text).Value = txtValorJogo.Text;
+                    cmd.Parameters.Add("@vopcao", MySqlDbType.Text).Value = txtValorOpcionais.Text;
+                    cmd.Parameters.Add("@total", MySqlDbType.Text).Value = txtValorTotal.Text;
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Dados cadastrados com Sucesso !!!");
+                    cmbTiposJogos.Text = "";
+                    txtValorJogo.Text = "";
+                    txtValorOpcionais.Text = "";
+                    txtValorTotal.Text = "";
+                    cmbTiposJogos.Focus();
+                    con.DesConnectarBD();
+
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                }
             }
         }   
     }
