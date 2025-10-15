@@ -85,7 +85,21 @@ namespace ProjetoGames
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-        }
+            if (txtValorJogo.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório");
+                txtValorJogo.Focus();
+            }
+            else if (txtValorOpcionais.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório");
+                txtValorOpcionais.Focus();
+            }
+            else if (txtValorTotal.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório");
+                txtValorTotal.Focus();
+            }
+        }   
     }
 }
