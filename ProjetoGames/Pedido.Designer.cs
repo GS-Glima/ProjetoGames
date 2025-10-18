@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtValorJogo = new System.Windows.Forms.TextBox();
             this.txtValorOpcionais = new System.Windows.Forms.TextBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
@@ -52,12 +52,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(41, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtCodigo.Location = new System.Drawing.Point(41, 35);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(126, 20);
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtValorJogo
             // 
@@ -214,6 +214,8 @@
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.Size = new System.Drawing.Size(683, 79);
             this.dgvPedido.TabIndex = 9;
+            this.dgvPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellContentClick);
+            this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPedido_MouseDoubleClick);
             // 
             // btnCalcular
             // 
@@ -254,7 +256,7 @@
             this.Controls.Add(this.txtValorTotal);
             this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.txtValorJogo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCodigo);
             this.Name = "Pedido";
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.Pedido_Load);
@@ -268,7 +270,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtValorJogo;
         private System.Windows.Forms.TextBox txtValorOpcionais;
         private System.Windows.Forms.TextBox txtValorTotal;

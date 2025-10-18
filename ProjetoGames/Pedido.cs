@@ -85,10 +85,7 @@ namespace ProjetoGames
             txtValorTotal.Text = valorTotal.ToString();
         }
 
-        private conexao GetCon()
-        {
-            return con;
-        }
+      
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -133,6 +130,33 @@ namespace ProjetoGames
                     MessageBox.Show(erro.Message);
                 }
             }
-        }   
+        }
+
+        private void dgvPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPedido_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            CarregarPedidos();
+        }
+        public void CarregarPedidos()
+        {
+            try
+            {
+                txtCodigo.Text = dgvPedido.SelectedRows[0].Cells[0].Value.ToString();
+                cmbTiposJogos.Text = dgvPedido.SelectedRows[0].Cells[1].Value.ToString();
+                txtValorJogo.Text = dgvPedido.SelectedRows[0].Cells[2].Value.ToString();
+                txtValorOpcionais.Text = dgvPedido.SelectedRows[0].Cells[3].Value.ToString();
+                txtValorTotal.Text = dgvPedido.SelectedRows[0].Cells[4].Value.ToString();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erros ao clicar" + error);
+            }
+
+        }
     }
 }
