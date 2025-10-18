@@ -1,5 +1,5 @@
 ﻿
-using MySqlConnector;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,7 +85,6 @@ namespace ProjetoGames
             txtValorTotal.Text = valorTotal.ToString();
         }
 
-      
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -132,10 +131,7 @@ namespace ProjetoGames
             }
         }
 
-        private void dgvPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void dgvPedido_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -157,6 +153,41 @@ namespace ProjetoGames
                 MessageBox.Show("Erros ao clicar" + error);
             }
 
+        }
+
+        private void txtPesquisar_TextChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPesquisar.Text != "")
+            {
+                try
+                {
+                    con.ConnectarBD();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = "select * from tbPedido";
+
+                    cmd.Connection = con.ConnectarBD();
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    DataTable dt = new DataTable();
+                    da.SelectCommand = cmd;
+                    da.Fill(dt);
+                    dgvPedido.DataSource = dt;
+                    con.DesConnectarBD();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else
+            {
+
+                dgvPedido.DataSource = null;
+            }
         }
     }
 }
