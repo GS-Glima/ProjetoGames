@@ -36,6 +36,7 @@ namespace ProjetoGames
             cmbTiposJogos.Items.Add("Jogo1");
             cmbTiposJogos.Items.Add("Jogo2");
             cmbTiposJogos.Items.Add("Jogo3");
+            
         }
 
         private void cmbTiposJogos_SelectedIndexChanged(object sender, EventArgs e)
@@ -188,6 +189,11 @@ namespace ProjetoGames
 
                 dgvPedido.DataSource = null;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
