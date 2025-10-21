@@ -59,7 +59,7 @@
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigo.ForeColor = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(63, 138);
+            this.txtCodigo.Location = new System.Drawing.Point(60, 168);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(187, 25);
@@ -70,7 +70,7 @@
             this.txtValorJogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtValorJogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorJogo.ForeColor = System.Drawing.Color.White;
-            this.txtValorJogo.Location = new System.Drawing.Point(421, 217);
+            this.txtValorJogo.Location = new System.Drawing.Point(418, 247);
             this.txtValorJogo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValorJogo.Name = "txtValorJogo";
             this.txtValorJogo.Size = new System.Drawing.Size(187, 25);
@@ -82,7 +82,7 @@
             this.txtValorOpcionais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtValorOpcionais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorOpcionais.ForeColor = System.Drawing.Color.White;
-            this.txtValorOpcionais.Location = new System.Drawing.Point(421, 319);
+            this.txtValorOpcionais.Location = new System.Drawing.Point(418, 349);
             this.txtValorOpcionais.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValorOpcionais.Name = "txtValorOpcionais";
             this.txtValorOpcionais.Size = new System.Drawing.Size(187, 25);
@@ -93,7 +93,7 @@
             this.txtValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorTotal.ForeColor = System.Drawing.Color.White;
-            this.txtValorTotal.Location = new System.Drawing.Point(421, 423);
+            this.txtValorTotal.Location = new System.Drawing.Point(418, 453);
             this.txtValorTotal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(187, 25);
@@ -104,7 +104,7 @@
             this.lblValorJogo.AutoSize = true;
             this.lblValorJogo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblValorJogo.ForeColor = System.Drawing.Color.White;
-            this.lblValorJogo.Location = new System.Drawing.Point(417, 181);
+            this.lblValorJogo.Location = new System.Drawing.Point(414, 211);
             this.lblValorJogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorJogo.Name = "lblValorJogo";
             this.lblValorJogo.Size = new System.Drawing.Size(118, 19);
@@ -116,7 +116,7 @@
             this.lblValorOpcionais.AutoSize = true;
             this.lblValorOpcionais.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblValorOpcionais.ForeColor = System.Drawing.Color.White;
-            this.lblValorOpcionais.Location = new System.Drawing.Point(417, 281);
+            this.lblValorOpcionais.Location = new System.Drawing.Point(414, 311);
             this.lblValorOpcionais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorOpcionais.Name = "lblValorOpcionais";
             this.lblValorOpcionais.Size = new System.Drawing.Size(161, 19);
@@ -128,7 +128,7 @@
             this.lblValorPagar.AutoSize = true;
             this.lblValorPagar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblValorPagar.ForeColor = System.Drawing.Color.White;
-            this.lblValorPagar.Location = new System.Drawing.Point(417, 380);
+            this.lblValorPagar.Location = new System.Drawing.Point(414, 410);
             this.lblValorPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorPagar.Name = "lblValorPagar";
             this.lblValorPagar.Size = new System.Drawing.Size(112, 19);
@@ -139,10 +139,11 @@
             // 
             this.txtPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesquisar.Location = new System.Drawing.Point(992, 102);
+            this.txtPesquisar.ForeColor = System.Drawing.Color.White;
+            this.txtPesquisar.Location = new System.Drawing.Point(965, 102);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(429, 25);
+            this.txtPesquisar.Size = new System.Drawing.Size(456, 25);
             this.txtPesquisar.TabIndex = 14;
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
@@ -151,7 +152,7 @@
             this.lblPesquisar.AutoSize = true;
             this.lblPesquisar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblPesquisar.ForeColor = System.Drawing.Color.White;
-            this.lblPesquisar.Location = new System.Drawing.Point(859, 104);
+            this.lblPesquisar.Location = new System.Drawing.Point(831, 108);
             this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPesquisar.Name = "lblPesquisar";
             this.lblPesquisar.Size = new System.Drawing.Size(83, 19);
@@ -165,7 +166,7 @@
             this.cmbTiposJogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTiposJogos.ForeColor = System.Drawing.Color.White;
             this.cmbTiposJogos.FormattingEnabled = true;
-            this.cmbTiposJogos.Location = new System.Drawing.Point(62, 231);
+            this.cmbTiposJogos.Location = new System.Drawing.Point(59, 261);
             this.cmbTiposJogos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cmbTiposJogos.Name = "cmbTiposJogos";
             this.cmbTiposJogos.Size = new System.Drawing.Size(180, 25);
@@ -234,7 +235,7 @@
             this.grpOpcionais.Controls.Add(this.chk2contas);
             this.grpOpcionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpOpcionais.ForeColor = System.Drawing.Color.White;
-            this.grpOpcionais.Location = new System.Drawing.Point(63, 309);
+            this.grpOpcionais.Location = new System.Drawing.Point(60, 339);
             this.grpOpcionais.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.grpOpcionais.Name = "grpOpcionais";
             this.grpOpcionais.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -245,13 +246,14 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSalvar.FlatAppearance.BorderSize = 2;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(1029, 581);
+            this.btnSalvar.Location = new System.Drawing.Point(1050, 606);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(176, 53);
@@ -262,13 +264,14 @@
             // 
             // btnSair
             // 
+            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSair.FlatAppearance.BorderSize = 2;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(1310, 581);
+            this.btnSair.Location = new System.Drawing.Point(1331, 606);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(176, 53);
@@ -282,11 +285,11 @@
             this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPedido.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(738, 181);
+            this.dgvPedido.Location = new System.Drawing.Point(759, 181);
             this.dgvPedido.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.RowHeadersWidth = 51;
-            this.dgvPedido.Size = new System.Drawing.Size(748, 376);
+            this.dgvPedido.Size = new System.Drawing.Size(758, 376);
             this.dgvPedido.TabIndex = 9;
             this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPedido_MouseDoubleClick);
             // 
@@ -298,7 +301,7 @@
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCalcular.ForeColor = System.Drawing.Color.White;
-            this.btnCalcular.Location = new System.Drawing.Point(62, 567);
+            this.btnCalcular.Location = new System.Drawing.Point(59, 597);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(234, 50);
@@ -315,20 +318,21 @@
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnNovo.ForeColor = System.Drawing.Color.White;
-            this.btnNovo.Location = new System.Drawing.Point(738, 581);
+            this.btnNovo.Location = new System.Drawing.Point(759, 606);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(176, 53);
             this.btnNovo.TabIndex = 10;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 102);
+            this.label1.Location = new System.Drawing.Point(58, 132);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 19);
@@ -341,7 +345,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(1643, 681);
+            this.ClientSize = new System.Drawing.Size(1658, 728);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.txtPesquisar);

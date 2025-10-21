@@ -195,5 +195,14 @@ namespace ProjetoGames
         {
 
         }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            txtCodigo.Text = "";
+            cmbTiposJogos.Text = "";
+            txtValorJogo.Text = "";
+            txtValorOpcionais.Text = "";
+            txtValorTotal.Text = "";
+        }
     }
 }

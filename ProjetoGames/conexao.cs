@@ -10,7 +10,7 @@ namespace ProjetoGames
 {
     class conexao
     {
-        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=bdprojeto;user=root;pwd=");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=bdgames;user=root;pwd=12345678");
 
         public static string msg;
 
