@@ -142,16 +142,21 @@ namespace ProjetoGames
         {
             try
             {
+                if (dgvPedido.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Selecione um pedido válido.");
+                    return;
+                }
+
                 txtCodigo.Text = dgvPedido.SelectedRows[0].Cells[0].Value.ToString();
                 cmbTiposJogos.Text = dgvPedido.SelectedRows[0].Cells[1].Value.ToString();
                 txtValorJogo.Text = dgvPedido.SelectedRows[0].Cells[2].Value.ToString();
                 txtValorOpcionais.Text = dgvPedido.SelectedRows[0].Cells[3].Value.ToString();
                 txtValorTotal.Text = dgvPedido.SelectedRows[0].Cells[4].Value.ToString();
-
             }
             catch (Exception error)
             {
-                MessageBox.Show("Erros ao clicar" + error);
+                MessageBox.Show("Erro ao clicar: " + error.Message);
             }
 
         }
@@ -193,6 +198,16 @@ namespace ProjetoGames
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            txtPesquisar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgvPedido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnNovo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSalvar.Anchor = AnchorStyles.Bottom;
+            btnSair.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 
         }
     }

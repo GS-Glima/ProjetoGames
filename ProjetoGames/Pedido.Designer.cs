@@ -36,22 +36,27 @@
             this.lblValorJogo = new System.Windows.Forms.Label();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.lblPesquisar = new System.Windows.Forms.Label();
             this.cmbTiposJogos = new System.Windows.Forms.ComboBox();
             this.chk2contas = new System.Windows.Forms.CheckBox();
             this.chk2controles = new System.Windows.Forms.CheckBox();
             this.chkTotalPass = new System.Windows.Forms.CheckBox();
             this.chkTesteDrive = new System.Windows.Forms.CheckBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvPedido = new System.Windows.Forms.DataGridView();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.dgvPedido = new System.Windows.Forms.DataGridView();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.lblPesquisar = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpOpcionais.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -59,7 +64,7 @@
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigo.ForeColor = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(63, 138);
+            this.txtCodigo.Location = new System.Drawing.Point(55, 176);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(187, 25);
@@ -70,7 +75,7 @@
             this.txtValorJogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtValorJogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorJogo.ForeColor = System.Drawing.Color.White;
-            this.txtValorJogo.Location = new System.Drawing.Point(421, 217);
+            this.txtValorJogo.Location = new System.Drawing.Point(413, 255);
             this.txtValorJogo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValorJogo.Name = "txtValorJogo";
             this.txtValorJogo.Size = new System.Drawing.Size(187, 25);
@@ -82,7 +87,7 @@
             this.txtValorOpcionais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtValorOpcionais.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorOpcionais.ForeColor = System.Drawing.Color.White;
-            this.txtValorOpcionais.Location = new System.Drawing.Point(421, 319);
+            this.txtValorOpcionais.Location = new System.Drawing.Point(413, 357);
             this.txtValorOpcionais.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValorOpcionais.Name = "txtValorOpcionais";
             this.txtValorOpcionais.Size = new System.Drawing.Size(187, 25);
@@ -93,7 +98,7 @@
             this.txtValorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.txtValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValorTotal.ForeColor = System.Drawing.Color.White;
-            this.txtValorTotal.Location = new System.Drawing.Point(421, 423);
+            this.txtValorTotal.Location = new System.Drawing.Point(413, 461);
             this.txtValorTotal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.Size = new System.Drawing.Size(187, 25);
@@ -104,7 +109,7 @@
             this.lblValorJogo.AutoSize = true;
             this.lblValorJogo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblValorJogo.ForeColor = System.Drawing.Color.White;
-            this.lblValorJogo.Location = new System.Drawing.Point(417, 181);
+            this.lblValorJogo.Location = new System.Drawing.Point(409, 219);
             this.lblValorJogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorJogo.Name = "lblValorJogo";
             this.lblValorJogo.Size = new System.Drawing.Size(118, 19);
@@ -116,7 +121,7 @@
             this.lblValorOpcionais.AutoSize = true;
             this.lblValorOpcionais.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblValorOpcionais.ForeColor = System.Drawing.Color.White;
-            this.lblValorOpcionais.Location = new System.Drawing.Point(417, 281);
+            this.lblValorOpcionais.Location = new System.Drawing.Point(409, 319);
             this.lblValorOpcionais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorOpcionais.Name = "lblValorOpcionais";
             this.lblValorOpcionais.Size = new System.Drawing.Size(161, 19);
@@ -128,35 +133,12 @@
             this.lblValorPagar.AutoSize = true;
             this.lblValorPagar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblValorPagar.ForeColor = System.Drawing.Color.White;
-            this.lblValorPagar.Location = new System.Drawing.Point(417, 380);
+            this.lblValorPagar.Location = new System.Drawing.Point(409, 418);
             this.lblValorPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorPagar.Name = "lblValorPagar";
             this.lblValorPagar.Size = new System.Drawing.Size(112, 19);
             this.lblValorPagar.TabIndex = 6;
             this.lblValorPagar.Text = "VALOR A PAGAR";
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesquisar.Location = new System.Drawing.Point(992, 102);
-            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(429, 25);
-            this.txtPesquisar.TabIndex = 14;
-            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
-            // 
-            // lblPesquisar
-            // 
-            this.lblPesquisar.AutoSize = true;
-            this.lblPesquisar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblPesquisar.ForeColor = System.Drawing.Color.White;
-            this.lblPesquisar.Location = new System.Drawing.Point(859, 104);
-            this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(83, 19);
-            this.lblPesquisar.TabIndex = 15;
-            this.lblPesquisar.Text = "PESQUISAR:";
             // 
             // cmbTiposJogos
             // 
@@ -165,7 +147,7 @@
             this.cmbTiposJogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTiposJogos.ForeColor = System.Drawing.Color.White;
             this.cmbTiposJogos.FormattingEnabled = true;
-            this.cmbTiposJogos.Location = new System.Drawing.Point(62, 231);
+            this.cmbTiposJogos.Location = new System.Drawing.Point(54, 269);
             this.cmbTiposJogos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cmbTiposJogos.Name = "cmbTiposJogos";
             this.cmbTiposJogos.Size = new System.Drawing.Size(180, 25);
@@ -234,7 +216,7 @@
             this.grpOpcionais.Controls.Add(this.chk2contas);
             this.grpOpcionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpOpcionais.ForeColor = System.Drawing.Color.White;
-            this.grpOpcionais.Location = new System.Drawing.Point(63, 309);
+            this.grpOpcionais.Location = new System.Drawing.Point(55, 347);
             this.grpOpcionais.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.grpOpcionais.Name = "grpOpcionais";
             this.grpOpcionais.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -242,6 +224,85 @@
             this.grpOpcionais.TabIndex = 8;
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.btnCalcular.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCalcular.FlatAppearance.BorderSize = 2;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.Location = new System.Drawing.Point(54, 605);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(234, 50);
+            this.btnCalcular.TabIndex = 12;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(53, 140);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 19);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "CÓDIGO DO PEDIDO";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnCalcular);
+            this.panel2.Controls.Add(this.grpOpcionais);
+            this.panel2.Controls.Add(this.cmbTiposJogos);
+            this.panel2.Controls.Add(this.lblValorPagar);
+            this.panel2.Controls.Add(this.lblValorOpcionais);
+            this.panel2.Controls.Add(this.lblValorJogo);
+            this.panel2.Controls.Add(this.txtValorTotal);
+            this.panel2.Controls.Add(this.txtValorOpcionais);
+            this.panel2.Controls.Add(this.txtValorJogo);
+            this.panel2.Controls.Add(this.txtCodigo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(678, 714);
+            this.panel2.TabIndex = 18;
+            // 
+            // dgvPedido
+            // 
+            this.dgvPedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPedido.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedido.Location = new System.Drawing.Point(30, 209);
+            this.dgvPedido.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.RowHeadersWidth = 51;
+            this.dgvPedido.Size = new System.Drawing.Size(887, 376);
+            this.dgvPedido.TabIndex = 9;
+            this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPedido_MouseDoubleClick);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.btnNovo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNovo.FlatAppearance.BorderSize = 2;
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.Location = new System.Drawing.Point(30, 609);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(176, 53);
+            this.btnNovo.TabIndex = 10;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
             // 
@@ -251,7 +312,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(1029, 581);
+            this.btnSalvar.Location = new System.Drawing.Point(392, 609);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(176, 53);
@@ -268,7 +329,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(1310, 581);
+            this.btnSair.Location = new System.Drawing.Point(741, 609);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(176, 53);
@@ -276,89 +337,65 @@
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             // 
-            // dgvPedido
+            // txtPesquisar
             // 
-            this.dgvPedido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPedido.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvPedido.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(738, 181);
-            this.dgvPedido.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.dgvPedido.Name = "dgvPedido";
-            this.dgvPedido.RowHeadersWidth = 51;
-            this.dgvPedido.Size = new System.Drawing.Size(748, 376);
-            this.dgvPedido.TabIndex = 9;
-            this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPedido_MouseDoubleClick);
+            this.txtPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesquisar.Location = new System.Drawing.Point(284, 130);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(429, 25);
+            this.txtPesquisar.TabIndex = 14;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
-            // btnCalcular
+            // lblPesquisar
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.btnCalcular.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCalcular.FlatAppearance.BorderSize = 2;
-            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCalcular.ForeColor = System.Drawing.Color.White;
-            this.btnCalcular.Location = new System.Drawing.Point(62, 567);
-            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(234, 50);
-            this.btnCalcular.TabIndex = 12;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = false;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.lblPesquisar.AutoSize = true;
+            this.lblPesquisar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblPesquisar.ForeColor = System.Drawing.Color.White;
+            this.lblPesquisar.Location = new System.Drawing.Point(151, 132);
+            this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(83, 19);
+            this.lblPesquisar.TabIndex = 15;
+            this.lblPesquisar.Text = "PESQUISAR:";
             // 
-            // btnNovo
+            // panel1
             // 
-            this.btnNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.btnNovo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNovo.FlatAppearance.BorderSize = 2;
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnNovo.ForeColor = System.Drawing.Color.White;
-            this.btnNovo.Location = new System.Drawing.Point(738, 581);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(176, 53);
-            this.btnNovo.TabIndex = 10;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = false;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblPesquisar);
+            this.panel1.Controls.Add(this.txtPesquisar);
+            this.panel1.Controls.Add(this.btnSair);
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Controls.Add(this.btnNovo);
+            this.panel1.Controls.Add(this.dgvPedido);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(678, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1034, 714);
+            this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 102);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 19);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "CÓDIGO DO PEDIDO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(458, 161);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 12);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Pressione espaço";
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(1643, 681);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblPesquisar);
-            this.Controls.Add(this.txtPesquisar);
-            this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.dgvPedido);
-            this.Controls.Add(this.grpOpcionais);
-            this.Controls.Add(this.cmbTiposJogos);
-            this.Controls.Add(this.lblValorPagar);
-            this.Controls.Add(this.lblValorOpcionais);
-            this.Controls.Add(this.lblValorJogo);
-            this.Controls.Add(this.txtValorTotal);
-            this.Controls.Add(this.txtValorOpcionais);
-            this.Controls.Add(this.txtValorJogo);
-            this.Controls.Add(this.txtCodigo);
+            this.ClientSize = new System.Drawing.Size(1712, 714);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -367,9 +404,12 @@
             this.Load += new System.EventHandler(this.Pedido_Load);
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -382,19 +422,22 @@
         private System.Windows.Forms.Label lblValorJogo;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.ComboBox cmbTiposJogos;
         private System.Windows.Forms.CheckBox chk2contas;
         private System.Windows.Forms.CheckBox chk2controles;
         private System.Windows.Forms.CheckBox chkTotalPass;
         private System.Windows.Forms.CheckBox chkTesteDrive;
         private System.Windows.Forms.GroupBox grpOpcionais;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvPedido;
+        private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.DataGridView dgvPedido;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label lblPesquisar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }
