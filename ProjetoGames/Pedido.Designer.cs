@@ -140,6 +140,29 @@
             this.lblValorPagar.TabIndex = 6;
             this.lblValorPagar.Text = "VALOR A PAGAR";
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.txtPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPesquisar.Location = new System.Drawing.Point(992, 102);
+            this.txtPesquisar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(429, 25);
+            this.txtPesquisar.TabIndex = 14;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            // 
+            // lblPesquisar
+            // 
+            this.lblPesquisar.AutoSize = true;
+            this.lblPesquisar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblPesquisar.ForeColor = System.Drawing.Color.White;
+            this.lblPesquisar.Location = new System.Drawing.Point(859, 104);
+            this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(83, 19);
+            this.lblPesquisar.TabIndex = 15;
+            this.lblPesquisar.Text = "PESQUISAR:";
+            // 
             // cmbTiposJogos
             // 
             this.cmbTiposJogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
@@ -306,6 +329,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSalvar.FlatAppearance.BorderSize = 2;
@@ -323,6 +347,7 @@
             // 
             // btnSair
             // 
+            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSair.FlatAppearance.BorderSize = 2;
