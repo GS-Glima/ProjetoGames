@@ -26,8 +26,7 @@ namespace ProjetoGames
        
             InitializeComponent();
 
-            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
-            this.WindowState = FormWindowState.Maximized;
+           
 
             int raio = 15; // arredondamento (pode mudar)
             GraphicsPath caminho = new GraphicsPath();
@@ -250,7 +249,8 @@ namespace ProjetoGames
         {
             if (WindowState == FormWindowState.Normal)
             {
-                WindowState = FormWindowState.Maximized;
+                this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+                this.WindowState = FormWindowState.Maximized;
             }
             else
             {
@@ -305,22 +305,21 @@ namespace ProjetoGames
                                                box.ClientRectangle.Width - 1,
                                                box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
 
-                // Clear text and border
+                
                 g.Clear(this.BackColor);
 
-                // Draw text
+                
                 g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
 
-                // Drawing Border
-                //Left
+              
                 g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
-                //Right
+                
                 g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
-                //Bottom
+               
                 g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
-                //Top1
+               
                 g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
-                //Top2
+               
                 g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
             }
         }
@@ -334,10 +333,18 @@ namespace ProjetoGames
 
         private void barra_MouseMove(object sender, MouseEventArgs e)
         {
-            if(mouseDown == true)
+            if (mouseDown && this.WindowState == FormWindowState.Normal)
             {
                 Point currentScreenPos = PointToScreen(e.Location);
-                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+                this.Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+
+                // 🔹 Detecta se o topo do form chegou na parte superior da tela
+                if (this.Top <= Screen.PrimaryScreen.WorkingArea.Top)
+                {
+                    // Maximiza automaticamente
+                    this.WindowState = FormWindowState.Maximized;
+                    mouseDown = false; // para o movimento (senão ele continua tentando arrastar)
+                }
             }
         }
 
