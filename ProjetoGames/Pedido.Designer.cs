@@ -49,7 +49,6 @@
             this.lblValorJogo = new System.Windows.Forms.Label();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
-            this.cmbTiposJogos = new System.Windows.Forms.ComboBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
             this.chkTesteDrive = new System.Windows.Forms.CheckBox();
             this.chkTotalPass = new System.Windows.Forms.CheckBox();
@@ -59,6 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtValorJogo = new System.Windows.Forms.TextBox();
+            this.cmbTiposJogos = new System.Windows.Forms.ComboBox();
+            this.panelCmb = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +67,7 @@
             this.panel1.SuspendLayout();
             this.grpOpcionais.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelCmb.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -89,7 +91,6 @@
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(1712, 49);
             this.barra.TabIndex = 5;
-            this.barra.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             this.barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_MouseDown);
             this.barra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.barra_MouseMove);
             this.barra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.barra_MouseUp);
@@ -184,7 +185,7 @@
             this.btnNovo.FlatAppearance.BorderSize = 0;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.ForeColor = System.Drawing.Color.Coral;
             this.btnNovo.Location = new System.Drawing.Point(88, 494);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNovo.Name = "btnNovo";
@@ -203,7 +204,7 @@
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.ForeColor = System.Drawing.Color.Coral;
             this.btnSalvar.Location = new System.Drawing.Point(390, 494);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSalvar.Name = "btnSalvar";
@@ -222,7 +223,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.ForeColor = System.Drawing.Color.Coral;
             this.btnSair.Location = new System.Drawing.Point(687, 494);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSair.Name = "btnSair";
@@ -243,14 +244,13 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(429, 25);
             this.txtPesquisar.TabIndex = 14;
-            this.txtPesquisar.Text = "Pressione espaço";
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
             this.lblPesquisar.AutoSize = true;
             this.lblPesquisar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblPesquisar.ForeColor = System.Drawing.Color.White;
+            this.lblPesquisar.ForeColor = System.Drawing.Color.Coral;
             this.lblPesquisar.Location = new System.Drawing.Point(151, 132);
             this.lblPesquisar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPesquisar.Name = "lblPesquisar";
@@ -310,7 +310,7 @@
             // 
             this.lblValorJogo.AutoSize = true;
             this.lblValorJogo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblValorJogo.ForeColor = System.Drawing.Color.White;
+            this.lblValorJogo.ForeColor = System.Drawing.Color.Coral;
             this.lblValorJogo.Location = new System.Drawing.Point(409, 219);
             this.lblValorJogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorJogo.Name = "lblValorJogo";
@@ -322,7 +322,7 @@
             // 
             this.lblValorOpcionais.AutoSize = true;
             this.lblValorOpcionais.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblValorOpcionais.ForeColor = System.Drawing.Color.White;
+            this.lblValorOpcionais.ForeColor = System.Drawing.Color.Coral;
             this.lblValorOpcionais.Location = new System.Drawing.Point(409, 319);
             this.lblValorOpcionais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorOpcionais.Name = "lblValorOpcionais";
@@ -334,28 +334,13 @@
             // 
             this.lblValorPagar.AutoSize = true;
             this.lblValorPagar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblValorPagar.ForeColor = System.Drawing.Color.White;
+            this.lblValorPagar.ForeColor = System.Drawing.Color.Coral;
             this.lblValorPagar.Location = new System.Drawing.Point(409, 418);
             this.lblValorPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorPagar.Name = "lblValorPagar";
             this.lblValorPagar.Size = new System.Drawing.Size(112, 19);
             this.lblValorPagar.TabIndex = 6;
             this.lblValorPagar.Text = "VALOR A PAGAR";
-            // 
-            // cmbTiposJogos
-            // 
-            this.cmbTiposJogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.cmbTiposJogos.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cmbTiposJogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTiposJogos.ForeColor = System.Drawing.Color.White;
-            this.cmbTiposJogos.FormattingEnabled = true;
-            this.cmbTiposJogos.Location = new System.Drawing.Point(54, 269);
-            this.cmbTiposJogos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.cmbTiposJogos.Name = "cmbTiposJogos";
-            this.cmbTiposJogos.Size = new System.Drawing.Size(180, 25);
-            this.cmbTiposJogos.TabIndex = 7;
-            this.cmbTiposJogos.Text = "ESCOLHA OS JOGOS";
-            this.cmbTiposJogos.SelectedIndexChanged += new System.EventHandler(this.cmbTiposJogos_SelectedIndexChanged);
             // 
             // grpOpcionais
             // 
@@ -374,17 +359,17 @@
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
             this.grpOpcionais.Paint += new System.Windows.Forms.PaintEventHandler(this.grpOpcionais_Paint);
-            this.grpOpcionais.Enter += new System.EventHandler(this.grpOpcionais_Enter);
             // 
             // chkTesteDrive
             // 
             this.chkTesteDrive.AutoSize = true;
+            this.chkTesteDrive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTesteDrive.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.chkTesteDrive.ForeColor = System.Drawing.Color.White;
+            this.chkTesteDrive.ForeColor = System.Drawing.Color.Coral;
             this.chkTesteDrive.Location = new System.Drawing.Point(24, 177);
             this.chkTesteDrive.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chkTesteDrive.Name = "chkTesteDrive";
-            this.chkTesteDrive.Size = new System.Drawing.Size(105, 23);
+            this.chkTesteDrive.Size = new System.Drawing.Size(102, 23);
             this.chkTesteDrive.TabIndex = 3;
             this.chkTesteDrive.Text = "TESTE DRIVE";
             this.chkTesteDrive.UseVisualStyleBackColor = true;
@@ -392,26 +377,27 @@
             // chkTotalPass
             // 
             this.chkTotalPass.AutoSize = true;
+            this.chkTotalPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkTotalPass.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.chkTotalPass.ForeColor = System.Drawing.Color.White;
+            this.chkTotalPass.ForeColor = System.Drawing.Color.Coral;
             this.chkTotalPass.Location = new System.Drawing.Point(24, 137);
             this.chkTotalPass.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chkTotalPass.Name = "chkTotalPass";
-            this.chkTotalPass.Size = new System.Drawing.Size(151, 23);
+            this.chkTotalPass.Size = new System.Drawing.Size(148, 23);
             this.chkTotalPass.TabIndex = 2;
             this.chkTotalPass.Text = "TOTAL PASS GAMER";
             this.chkTotalPass.UseVisualStyleBackColor = true;
-            this.chkTotalPass.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // chk2controles
             // 
             this.chk2controles.AutoSize = true;
+            this.chk2controles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chk2controles.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.chk2controles.ForeColor = System.Drawing.Color.White;
+            this.chk2controles.ForeColor = System.Drawing.Color.Coral;
             this.chk2controles.Location = new System.Drawing.Point(24, 94);
             this.chk2controles.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chk2controles.Name = "chk2controles";
-            this.chk2controles.Size = new System.Drawing.Size(117, 23);
+            this.chk2controles.Size = new System.Drawing.Size(114, 23);
             this.chk2controles.TabIndex = 1;
             this.chk2controles.Text = "2 CONTROLES";
             this.chk2controles.UseVisualStyleBackColor = true;
@@ -419,12 +405,14 @@
             // chk2contas
             // 
             this.chk2contas.AutoSize = true;
+            this.chk2contas.FlatAppearance.BorderSize = 2;
+            this.chk2contas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chk2contas.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.chk2contas.ForeColor = System.Drawing.Color.White;
+            this.chk2contas.ForeColor = System.Drawing.Color.Coral;
             this.chk2contas.Location = new System.Drawing.Point(24, 54);
             this.chk2contas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.chk2contas.Name = "chk2contas";
-            this.chk2contas.Size = new System.Drawing.Size(92, 23);
+            this.chk2contas.Size = new System.Drawing.Size(89, 23);
             this.chk2contas.TabIndex = 0;
             this.chk2contas.Text = "2 CONTAS";
             this.chk2contas.UseVisualStyleBackColor = true;
@@ -437,7 +425,7 @@
             this.btnCalcular.FlatAppearance.BorderSize = 0;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCalcular.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular.ForeColor = System.Drawing.Color.Coral;
             this.btnCalcular.Location = new System.Drawing.Point(54, 605);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCalcular.Name = "btnCalcular";
@@ -451,21 +439,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(53, 140);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 19);
             this.label1.TabIndex = 16;
             this.label1.Text = "CÓDIGO DO PEDIDO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panelCmb);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnCalcular);
             this.panel2.Controls.Add(this.grpOpcionais);
-            this.panel2.Controls.Add(this.cmbTiposJogos);
             this.panel2.Controls.Add(this.lblValorPagar);
             this.panel2.Controls.Add(this.lblValorOpcionais);
             this.panel2.Controls.Add(this.lblValorJogo);
@@ -489,7 +476,28 @@
             this.txtValorJogo.Name = "txtValorJogo";
             this.txtValorJogo.Size = new System.Drawing.Size(187, 18);
             this.txtValorJogo.TabIndex = 1;
-            this.txtValorJogo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // cmbTiposJogos
+            // 
+            this.cmbTiposJogos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.cmbTiposJogos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmbTiposJogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTiposJogos.ForeColor = System.Drawing.Color.Coral;
+            this.cmbTiposJogos.FormattingEnabled = true;
+            this.cmbTiposJogos.Location = new System.Drawing.Point(0, 0);
+            this.cmbTiposJogos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cmbTiposJogos.Name = "cmbTiposJogos";
+            this.cmbTiposJogos.Size = new System.Drawing.Size(194, 25);
+            this.cmbTiposJogos.TabIndex = 7;
+            this.cmbTiposJogos.Text = "ESCOLHA OS JOGOS";
+            // 
+            // panelCmb
+            // 
+            this.panelCmb.Controls.Add(this.cmbTiposJogos);
+            this.panelCmb.Location = new System.Drawing.Point(48, 254);
+            this.panelCmb.Name = "panelCmb";
+            this.panelCmb.Size = new System.Drawing.Size(194, 29);
+            this.panelCmb.TabIndex = 17;
             // 
             // Pedido
             // 
@@ -518,6 +526,7 @@
             this.grpOpcionais.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelCmb.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -540,7 +549,6 @@
         private System.Windows.Forms.Label lblValorJogo;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;
-        private System.Windows.Forms.ComboBox cmbTiposJogos;
         private System.Windows.Forms.GroupBox grpOpcionais;
         private System.Windows.Forms.CheckBox chkTesteDrive;
         private System.Windows.Forms.CheckBox chkTotalPass;
@@ -553,5 +561,7 @@
         private System.Windows.Forms.Panel barra;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel borderBottom;
+        private System.Windows.Forms.Panel panelCmb;
+        private System.Windows.Forms.ComboBox cmbTiposJogos;
     }
 }

@@ -23,45 +23,46 @@ namespace ProjetoGames
         conexao con = new conexao();
         public Pedido()
         {
-       
-            InitializeComponent();
-
-           
-
-            int raio = 15; // arredondamento (pode mudar)
-            GraphicsPath caminho = new GraphicsPath();
-            caminho.AddArc(0, 0, raio, raio, 180, 90);
-            caminho.AddArc(btnNovo.Width - raio, 0, raio, raio, 270, 90);
-            caminho.AddArc(btnNovo.Width - raio, btnNovo.Height - raio, raio, raio, 0, 90);
-            caminho.AddArc(0, btnNovo.Height - raio, raio, raio, 90, 90);
-            caminho.CloseAllFigures();
-
-            btnNovo.Region = new Region(caminho);
-            btnSalvar.Region = new Region(caminho);
-            btnSair.Region = new Region(caminho);
+            InitializeComponent();         
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Pedido_Load(object sender, EventArgs e)
         {
             cmbTiposJogos.Items.Add("Jogo1");
             cmbTiposJogos.Items.Add("Jogo2");
             cmbTiposJogos.Items.Add("Jogo3");
-            
+
+            ArredondarBotoes();
+
+            panelCmb.BackColor = Color.Coral;
+            panelCmb.Padding = new Padding(1);
+            cmbTiposJogos.FlatStyle = FlatStyle.Flat;
+            cmbTiposJogos.BackColor = Color.FromArgb(30, 30, 30);
+            cmbTiposJogos.ForeColor = Color.Coral;
+            cmbTiposJogos.Dock = DockStyle.Fill;
         }
 
-        private void cmbTiposJogos_SelectedIndexChanged(object sender, EventArgs e)
+        private void ArredondarBotoes()
         {
-            
+            int raio = 15;
+
+            ArredondarBotao(btnNovo, raio);
+            ArredondarBotao(btnSalvar, raio);
+            ArredondarBotao(btnSair, raio);
+            ArredondarBotao(btnCalcular, raio);
+        }
+
+        private void ArredondarBotao(System.Windows.Forms.Button botao, int raio)
+        {
+            GraphicsPath caminho = new GraphicsPath();
+            caminho.AddArc(0, 0, raio, raio, 180, 90);
+            caminho.AddArc(botao.Width - raio, 0, raio, raio, 270, 90);
+            caminho.AddArc(botao.Width - raio, botao.Height - raio, raio, raio, 0, 90);
+            caminho.AddArc(0, botao.Height - raio, raio, raio, 90, 90);
+            caminho.CloseAllFigures();
+
+            botao.Region = new Region(caminho);
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -152,8 +153,6 @@ namespace ProjetoGames
             }
         }
 
-
-
         private void dgvPedido_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             CarregarPedidos();
@@ -179,11 +178,6 @@ namespace ProjetoGames
                 MessageBox.Show("Erro ao clicar: " + error.Message);
             }
 
-        }
-
-        private void txtPesquisar_TextChanged_1(object sender, EventArgs e)
-        {
-            
         }
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
@@ -214,11 +208,6 @@ namespace ProjetoGames
 
                 dgvPedido.DataSource = null;
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -269,20 +258,11 @@ namespace ProjetoGames
             this.Close();
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
             borderBottom.Height = 1;
         }
 
-        private void grpOpcionais_Enter(object sender, EventArgs e)
-        {
-         
-        }
 
         private void grpOpcionais_Paint(object sender, PaintEventArgs e)
         {
@@ -305,21 +285,13 @@ namespace ProjetoGames
                                                box.ClientRectangle.Width - 1,
                                                box.ClientRectangle.Height - (int)(strSize.Height / 2) - 1);
 
-                
+
                 g.Clear(this.BackColor);
-
-                
                 g.DrawString(box.Text, box.Font, textBrush, box.Padding.Left, 0);
-
-              
                 g.DrawLine(borderPen, rect.Location, new Point(rect.X, rect.Y + rect.Height));
-                
                 g.DrawLine(borderPen, new Point(rect.X + rect.Width, rect.Y), new Point(rect.X + rect.Width, rect.Y + rect.Height));
-               
                 g.DrawLine(borderPen, new Point(rect.X, rect.Y + rect.Height), new Point(rect.X + rect.Width, rect.Y + rect.Height));
-               
                 g.DrawLine(borderPen, new Point(rect.X, rect.Y), new Point(rect.X + box.Padding.Left, rect.Y));
-               
                 g.DrawLine(borderPen, new Point(rect.X + box.Padding.Left + (int)(strSize.Width), rect.Y), new Point(rect.X + rect.Width, rect.Y));
             }
         }
@@ -338,12 +310,10 @@ namespace ProjetoGames
                 Point currentScreenPos = PointToScreen(e.Location);
                 this.Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
 
-                // 🔹 Detecta se o topo do form chegou na parte superior da tela
                 if (this.Top <= Screen.PrimaryScreen.WorkingArea.Top)
                 {
-                    // Maximiza automaticamente
                     this.WindowState = FormWindowState.Maximized;
-                    mouseDown = false; // para o movimento (senão ele continua tentando arrastar)
+                    mouseDown = false; 
                 }
             }
         }
